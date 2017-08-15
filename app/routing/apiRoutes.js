@@ -1,12 +1,12 @@
 var data = require('../data/friends');
 
-module.exports = function(app) {
+module.exports = (app) => {
 
-    app.get("/api/v1/friends", function(req, res) {
+    app.get("/api/v1/friends", (req, res) => {
         res.json(data);
     });
 
-    app.post("/api/v1/friends", function(req, res) {
+    app.post("/api/v1/friends", (req, res) => {
 
         var person = req.body;
         var lowestScore;

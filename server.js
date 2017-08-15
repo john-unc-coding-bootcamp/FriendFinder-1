@@ -1,6 +1,6 @@
 // Dependenceis
-var express = require("express");
-var bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require('body-parser');
 
 // Init Server
 var app = express();
@@ -15,6 +15,6 @@ require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 
 // Server Listen
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), () => {
   console.log("App listening on PORT " + app.get('port'));
 });
